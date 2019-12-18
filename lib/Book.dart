@@ -13,7 +13,7 @@ class Book extends StatelessWidget {
         height: 100.0,
       child: Column(
         children: <Widget>[
-          Icon(Icons.add),
+          Icon(Icons.airplay),
           Text(name)
         ],
       )

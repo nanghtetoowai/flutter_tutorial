@@ -14,7 +14,9 @@ class FirstScreen extends StatelessWidget {
           child: Column(
             children: <Widget>[
               Book("Product 1"),
+              SizedBox(height:8.0),
               Book("Product 2"),
+              SizedBox(height:8.0),
               Book("Product 3")
             ],
           ),
