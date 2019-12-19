@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app/FirstScreen.dart';
+
+
+
 
 class Book extends StatelessWidget {
   final String name;
@@ -7,10 +9,18 @@ class Book extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Colors.lightGreenAccent,
         padding: EdgeInsets.all(10.0),
         width: 100.0,
-        height: 100.0,
+        height: 80.0,
+        decoration: new BoxDecoration(
+            color: Colors.lightBlueAccent,
+            borderRadius: new BorderRadius.only(
+                topLeft:  const  Radius.circular(10.0),
+                topRight: const  Radius.circular(10.0),
+                bottomLeft: const  Radius.circular(10.0),
+                bottomRight: const  Radius.circular(10.0))
+
+    ),
       child: Column(
         children: <Widget>[
           Icon(Icons.airplay),

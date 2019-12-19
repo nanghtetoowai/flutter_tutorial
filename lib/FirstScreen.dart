@@ -1,5 +1,8 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_app/Book.dart';
+import 'package:flutter_app/Dialog.dart';
+import 'package:flutter_app/SecondScreen.dart';
 
 class FirstScreen extends StatelessWidget {
   @override
@@ -8,19 +11,34 @@ class FirstScreen extends StatelessWidget {
       appBar: AppBar(
         title: Text('First Screen'),
       ),
-      body:Container(
-        child:Padding(
+      body:Column(
+        children: <Widget>[
+          Container(
+      child:Padding(
           padding: EdgeInsets.all(10.0),
-          child: Column(
-            children: <Widget>[
-              Book("Product 1"),
-              SizedBox(height:8.0),
-              Book("Product 2"),
-              SizedBox(height:8.0),
-              Book("Product 3")
-            ],
-          ),
-        )
+
+    )
+    ),
+      Container(
+        child: RaisedButton(
+          child: Text('Next Screen'),
+          onPressed: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => SecondScreen()),
+            );
+            // Navigate to second route when tapped.
+          },
+        ),
+      ),
+        MyDialog("ssss"),
+         SizedBox(height: 20.0),
+         Image(
+           image: AssetImage('assets/beelogo.png'),
+
+
+         )
+        ],
       )
     );
   }
